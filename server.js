@@ -18,7 +18,7 @@ app.get('/submit', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Hi, Thank you for visiting Duncans first node.js app. I hope you have a spectacular day!');
+  res.sendFile(path.join(__dirname, '/views/home.html'));
 });
 
 // Listen to the App Engine-specified port, or 8080 otherwise
