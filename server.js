@@ -10,17 +10,19 @@ app.post('/submit', (req, res) => {
     name: req.body.name,
     message: req.body.message
   });
-  res.send('Thanks for your message!');
+  res.sendFile(path.join(__dirname, '/views/submited.html'));
 });
 
 app.get('/submit', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/form.html'));
 });
 
+app.get('/home', (req, res) => {
+  res.sendFile(path.join(__dirname, '/views/home.html'));
+});
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/home.html'));
 });
-
 // Listen to the App Engine-specified port, or 8080 otherwise
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
