@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/my-nodejs-service-gcp",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
